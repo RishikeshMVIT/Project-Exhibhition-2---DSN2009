@@ -1,6 +1,6 @@
 
 #Remove after first execution
-#import setup
+import setup
 
 #Loading dependencies
 
