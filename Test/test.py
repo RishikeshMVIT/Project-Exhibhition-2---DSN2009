@@ -44,8 +44,8 @@ while True:
 ###Hand pose estimation###
 
 #Change this to use video or webcam
-cap = cv2.VideoCapture(0)
-#cap = cv2.VideoCapture(videoplayback_h.mp4)
+#cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('videoplayback_h.mp4')
 
 mpHands = mp.solutions.hands
 hands = mpHands.Hands(static_image_mode=False,
