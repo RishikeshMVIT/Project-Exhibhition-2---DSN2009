@@ -44,8 +44,8 @@ while True:
 ###Hand pose estimation###
 
 #Change this to use video or webcam
-#cap = cv2.VideoCapture(0)
-cap = cv2.VideoCapture('videoplayback_h.mp4')
+cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture('videoplayback_h.mp4')
 
 mpHands = mp.solutions.hands
 hands = mpHands.Hands(static_image_mode=False,
@@ -61,7 +61,7 @@ while True:
     success, img = cap.read()
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = hands.process(imgRGB)
-    #print(results.multi_hand_landmarks)
+    print(results.multi_hand_landmarks)
 
     if results.multi_hand_landmarks:
         for handLms in results.multi_hand_landmarks:
